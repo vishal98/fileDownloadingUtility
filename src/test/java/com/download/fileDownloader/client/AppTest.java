@@ -1,4 +1,4 @@
-package com.download.fileDownloader;
+package com.download.fileDownloader.client;
 
 import org.testng.Assert;
 import org.testng.TestNG;

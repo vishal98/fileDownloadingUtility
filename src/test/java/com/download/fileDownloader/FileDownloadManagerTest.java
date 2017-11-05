@@ -1,4 +1,4 @@
-package com.download.fileDownloader.client;
+package com.download.fileDownloader;
 
 import java.io.File;
 
@@ -33,7 +33,7 @@ public class FileDownloadManagerTest {
   
   @Test(dependsOnMethods={"startDownload"})
   public void acceptNewCommand() {
-	    fileDownloadManager.acceptNewCommand();
+	    fileDownloadManager.runCommandInterface();
   }
   
   @Test(dependsOnMethods={"acceptNewCommand"})
