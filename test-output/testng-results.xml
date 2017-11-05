@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="5485" started-at="2017-11-05T09:57:50Z" finished-at="2017-11-05T09:57:56Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="5485" started-at="2017-11-05T09:57:50Z" finished-at="2017-11-05T09:57:56Z">
+      <class name="com.download.fileDownloader.client.FileDownloadManagerTest">
+        <test-method status="PASS" signature="FileDownloadManager()[pri:0, instance:com.download.fileDownloader.client.FileDownloadManagerTest@2471cca7]" name="FileDownloadManager" duration-ms="160" started-at="2017-11-05T15:27:50Z" finished-at="2017-11-05T15:27:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FileDownloadManager -->
+        <test-method status="PASS" signature="startDownload()[pri:0, instance:com.download.fileDownloader.client.FileDownloadManagerTest@2471cca7]" name="startDownload" duration-ms="5" started-at="2017-11-05T15:27:50Z" depends-on-methods="com.download.fileDownloader.client.FileDownloadManagerTest.FileDownloadManager" finished-at="2017-11-05T15:27:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startDownload -->
+        <test-method status="PASS" signature="acceptNewCommand()[pri:0, instance:com.download.fileDownloader.client.FileDownloadManagerTest@2471cca7]" name="acceptNewCommand" duration-ms="159" started-at="2017-11-05T15:27:51Z" depends-on-methods="com.download.fileDownloader.client.FileDownloadManagerTest.startDownload" finished-at="2017-11-05T15:27:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- acceptNewCommand -->
+        <test-method status="PASS" signature="pauseDownload()[pri:0, instance:com.download.fileDownloader.client.FileDownloadManagerTest@2471cca7]" name="pauseDownload" duration-ms="5" started-at="2017-11-05T15:27:51Z" depends-on-methods="com.download.fileDownloader.client.FileDownloadManagerTest.acceptNewCommand" finished-at="2017-11-05T15:27:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pauseDownload -->
+        <test-method status="PASS" signature="resumeDownload()[pri:0, instance:com.download.fileDownloader.client.FileDownloadManagerTest@2471cca7]" name="resumeDownload" duration-ms="2" started-at="2017-11-05T15:27:51Z" depends-on-methods="com.download.fileDownloader.client.FileDownloadManagerTest.pauseDownload" finished-at="2017-11-05T15:27:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resumeDownload -->
+        <test-method status="PASS" signature="stopDownloadManager()[pri:0, instance:com.download.fileDownloader.client.FileDownloadManagerTest@2471cca7]" name="stopDownloadManager" duration-ms="1103" started-at="2017-11-05T15:27:51Z" depends-on-methods="com.download.fileDownloader.client.FileDownloadManagerTest.pauseDownload" finished-at="2017-11-05T15:27:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopDownloadManager -->
+        <test-method status="PASS" signature="initTest()[pri:0, instance:com.download.fileDownloader.client.FileDownloadManagerTest@2471cca7]" name="initTest" duration-ms="3993" started-at="2017-11-05T15:27:52Z" depends-on-methods="com.download.fileDownloader.client.FileDownloadManagerTest.stopDownloadManager" finished-at="2017-11-05T15:27:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTest -->
+        <test-method status="PASS" signature="validateFileDate()[pri:0, instance:com.download.fileDownloader.client.FileDownloadManagerTest@2471cca7]" name="validateFileDate" duration-ms="4" started-at="2017-11-05T15:27:56Z" depends-on-methods="com.download.fileDownloader.client.FileDownloadManagerTest.initTest" finished-at="2017-11-05T15:27:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateFileDate -->
+      </class> <!-- com.download.fileDownloader.client.FileDownloadManagerTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

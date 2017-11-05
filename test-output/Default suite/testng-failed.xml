@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.download.fileDownloader.client.FileDownloadManagerTest">
+        <methods>
+          <include name="initTest"/>
+          <include name="showDownloadProgress"/>
+          <include name="FileDownloadManager"/>
+          <include name="resumeDownload"/>
+          <include name="startDownload"/>
+          <include name="acceptNewCommand"/>
+          <include name="pauseDownload"/>
+          <include name="stopDownloadManager"/>
+          <include name="validateFileDate"/>
+        </methods>
+      </class> <!-- com.download.fileDownloader.client.FileDownloadManagerTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
