@@ -27,17 +27,14 @@ public class App {
 			String input = sc.nextLine();
 			if (input != null && input.length() > 0) {
 				String[] data = input.split("\\s+");
-				command = data[0];
+				url = data[0];
 				if (data.length > 1) {
-					url = data[1];
-				} else {
-					System.out.println("url not specified");
-				}
-				if (data.length > 2) {
-					filePath = data[2];
+					filePath = data[1];
 				} else {
 					System.out.println("file path not specified");
+				   main(data);
 				}
+				
 			}
 
 			IFileDownloadManager fl = new FileDownloadManager(url, filePath);

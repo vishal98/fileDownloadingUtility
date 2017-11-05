@@ -37,7 +37,10 @@ public class FileDownloadManager implements IFileDownloadManager {
 	public FileDownloadManager(String url, String fileDestinationPath)  {
 		try {
 			this.url = new URL(url);
-			this.filepath = "/src" +fileDestinationPath;
+			// Get the file name from url path
+			 url = this.url.getFile();
+			String fileName = url.substring(url.lastIndexOf('/') + 1);
+			this.filepath = fileDestinationPath+fileName;
 		} catch (MalformedURLException e) {
 			System.out.println(e);
 		}
