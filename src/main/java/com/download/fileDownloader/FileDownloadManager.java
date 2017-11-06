@@ -1,5 +1,12 @@
 package com.download.fileDownloader;
 
+/*
+ * *
+ * This class manage download for file including status,progress and action 
+ * init method can be used to start download,get download progress and allow stop and resume for dowmlaoad
+ * FileDownload class take care of managing httpconnection and downloading actual file
+ */
+ 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
