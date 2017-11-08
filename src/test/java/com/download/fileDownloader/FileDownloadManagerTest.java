@@ -38,29 +38,15 @@ public class FileDownloadManagerTest {
   }
   
   @Test(dependsOnMethods={"startDownloadAsync"})
-  public void pauseDownload() {
-		
-	  progress=fileDownloadManager.getDownloadProgress();	  	  
-	  while(progress==null||progress.isEmpty()){
-          if(fileDownloadManager.getCurrentState()==EDownloadStates.COMPLETED||fileDownloadManager.getCurrentState()==EDownloadStates.ERROR){
-        	  return;
-          }
-		  progress=fileDownloadManager.getDownloadProgress();	  	  
+	public void pauseDownload() throws InterruptedException {
+		downloadBarier();
+		progress = fileDownloadManager.getDownloadProgress();
+		Assert.assertTrue(fileDownloadManager.pauseDownload());
+			Thread.sleep(5000);
+		List<Integer> progress2 = fileDownloadManager.getDownloadProgress();
+		Assert.assertEquals(progress.get(progress.size() - 1), progress2.get(progress2.size() - 1));
 
-	  }
-	  
-	progress=fileDownloadManager.getDownloadProgress();	  
-    Assert.assertTrue(fileDownloadManager.pauseDownload());
-    try {
-		Thread.sleep(5000);
-	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
 	}
-    List<Integer> progress2 =fileDownloadManager.getDownloadProgress();
-   Assert.assertEquals(progress.get(progress.size()-1), progress2.get(progress2.size()-1));
-    
-  }
   
   @Test(dependsOnMethods={"pauseDownload"})
   public void resumeDownloadTest() {
@@ -113,6 +99,15 @@ public class FileDownloadManagerTest {
 	  return new File(filePath);	
   }
   
+  public void downloadBarier(){
+	  while(progress==null||progress.isEmpty()){
+          if(fileDownloadManager.getCurrentState()==EDownloadStates.COMPLETED||fileDownloadManager.getCurrentState()==EDownloadStates.ERROR){
+        	  return;
+          }
+		  progress=fileDownloadManager.getDownloadProgress();	  	  
+
+	  }
+  }
   
   
 }
