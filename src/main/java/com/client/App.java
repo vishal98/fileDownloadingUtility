@@ -1,10 +1,11 @@
-package com.download.fileDownloader.client;
+package com.client;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+import com.download.IDownloadManager;
 import com.download.fileDownloader.FileDownloadManager;
-import com.download.fileDownloader.IFileDownloadManager;
 
 
 public class App {
@@ -12,11 +13,11 @@ public class App {
 	
 	public static void main(String[] args) throws FileNotFoundException {
 		App app = new App();
-		app.fileInputs();
+		app.downloadFile();
 	}
 
 	
-	public void fileInputs() {
+	public File downloadFile() {
 		Scanner sc = null;
 		try {
 			String url = null;
@@ -37,14 +38,17 @@ public class App {
 				
 			}
 
-			IFileDownloadManager fl = new FileDownloadManager(url, filePath);
-			fl.init();
+			IDownloadManager downloadManager = new FileDownloadManager(url, filePath);
+			downloadManager.init();
+			File fl=new File(filePath);
+			return fl;
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 
 			sc.close();
 		}
+		return null;
 
 	}
 

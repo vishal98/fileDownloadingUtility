@@ -1,7 +1,8 @@
-package com.download.fileDownloader.client;
+package com.client;
 
 import org.testng.Assert;
 import org.testng.TestNG;
+import org.testng.annotations.Test;
 
 /**
  * Unit test for simple App.
@@ -16,6 +17,7 @@ public class AppTest
      *
      * @param testName name of the test case
      */
+	@Test
     public AppTest( String testName )
     {
         app=new App();
@@ -23,12 +25,9 @@ public class AppTest
 
  
 
-    /**
-     * Rigourous Test :-)
-     */
+	@Test
     public void testApp()
     {
-    	app.fileInputs();
-    	Assert.assertTrue(true);
+    	Assert.assertNotNull(app.downloadFile());
     }
 }
