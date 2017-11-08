@@ -258,7 +258,6 @@ public class FileDownloadManager extends IDownloadManager {
 							progressList=new ArrayList<>();
 						}
 						progressList.add(progress);
-						updateProgress(progressList);
 					}
 				}
 			} catch (IOException e1) {
